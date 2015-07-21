@@ -32,8 +32,8 @@ RUN sed -e 's/;daemonize = yes/daemonize = no/' -i /etc/php5/fpm/php-fpm.conf \
     && sed -e 's/;listen\.group/listen.group/' -i /etc/php5/fpm/pool.d/www.conf \
     && echo "opcache.enable=1" >> /etc/php5/mods-available/opcache.ini \
     && echo "opcache.enable_cli=1" >> /etc/php5/mods-available/opcache.ini \
-    && echo "\ndaemon off;" >> /etc/nginx/nginx.conf
-    && sed -i '/display_errors/ c\display_errors = On' /etc/php5/cli/php.ini
+    && echo "\ndaemon off;" >> /etc/nginx/nginx.conf \
+    && sed -i '/display_errors/ c\display_errors = On' /etc/php5/cli/php.ini \
     && sed -i '/date.timezone/ c\date.timezone = Europe/Paris' /etc/php5/cli/php.ini
 
 ADD supervisor.conf /etc/supervisor/conf.d/supervisor.conf
