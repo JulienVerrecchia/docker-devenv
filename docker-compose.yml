@@ -1,7 +1,8 @@
 web:
   image: julienverrecchia/docker-devenv
+  # build: .
   ports:
-   - "12000:12000"
+   - "8888:80"
   volumes:
    - www/ceweb:/var/www
   tty: true
