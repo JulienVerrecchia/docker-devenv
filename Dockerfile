@@ -39,6 +39,6 @@ RUN usermod -u 1000 www-data
 VOLUME /var/www
 WORKDIR /var/www
 
-EXPOSE 8989
+EXPOSE 80
 
 CMD ["/usr/bin/supervisord"]
