@@ -19,6 +19,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       php5-pgsql \
       php5-memcache \
       php5-apcu \
+      php5-gd \
+      php5-ldap \
+      php5-mcrypt \
       php-twig \
       supervisor \
     && rm -rf /var/lib/apt/lists/*
