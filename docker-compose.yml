@@ -1,0 +1,10 @@
+web:
+  image: julienverrecchia/symfony_dev
+  # build: .
+  ports:
+   - "12000:12000"
+  volumes:
+   - .:/var/www
+  tty: true
+  # links:
+  #  - redis
